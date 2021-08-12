@@ -7,18 +7,14 @@ const ResultDonations = lazy(() => import('pages/ResultDonations'));
 const App = () => (
   <BrowserRouter>
     <Suspense delayMs={500} fallback={<p>Loading...</p>}>
-      <Switch>
-        <Route path="/">
-          <MyPage />
-        </Route>
-      </Switch>
-    </Suspense>
-    <Suspense delayMs={500} fallback={<p>Loading...</p>}>
-      <Switch>
-        <Route path="/result">
-          <ResultDonations />
-        </Route>
-      </Switch>
+    <Switch>
+          <Route exact path="/">
+            <MyPage />
+          </Route>
+          <Route path="/result">
+            <ResultDonations />
+          </Route>
+        </Switch>
     </Suspense>
   </BrowserRouter>
   
