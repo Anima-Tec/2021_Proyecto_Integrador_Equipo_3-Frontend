@@ -8,13 +8,13 @@ const App = () => (
   <BrowserRouter>
     <Suspense delayMs={500} fallback={<p>Loading...</p>}>
     <Switch>
-          <Route exact path="/">
-            <MyPage />
-          </Route>
-          <Route path="/result">
-            <ResultDonations />
-          </Route>
-        </Switch>
+      <Route exact path="/">
+        <MyPage />
+      </Route>
+      <Route path="/result">
+        <ResultDonations />
+      </Route>
+    </Switch>
     </Suspense>
   </BrowserRouter>
   
