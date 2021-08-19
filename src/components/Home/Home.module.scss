@@ -1,0 +1,25 @@
+@import '../../sass/variables';
+
+.link {
+  @apply inline-flex py-4 w-full items-center justify-center rounded-lg hover:opacity-90;
+}
+
+.tabs {
+  @apply rounded-lg flex justify-center mt-12;
+
+  box-shadow: $shadow;
+
+  .sign_up_link {
+    @extend .link;
+
+    color: $primary;
+  }
+
+  .sign_in_link {
+    @extend .link;
+
+    @apply text-white;
+
+    background-color: $primary;
+  }
+}

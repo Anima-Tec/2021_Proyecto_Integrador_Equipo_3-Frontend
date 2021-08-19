@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import texture from 'assets/texture.svg';
 
 const OnboardingLayout = ({ children }) => (
-  <section className="flex flex-col md:flex-row h-screen items-center">
+  <main className="flex flex-col md:flex-row h-screen items-center w-full">
     <div className="hidden md:block w-full md:w-2/5 h-screen">
       <img src={texture} alt="Texture" className="w-full h-full object-cover" />
     </div>
@@ -13,7 +13,7 @@ const OnboardingLayout = ({ children }) => (
     >
       {children}
     </div>
-  </section>
+  </main>
 );
 
 OnboardingLayout.propTypes = {
