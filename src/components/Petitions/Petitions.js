@@ -2,11 +2,9 @@ import { Fragment, useRef } from 'react';
 
 import PetitionCard from 'components/PetitionCard';
 import Loading from 'components/Loading';
-import  EmptyState  from "components/EmptyState";
 import UnderlinedTitle from 'components/UnderlinedTitle';
 import { useIntersectionObserver } from 'hooks/intersectionObserver';
 import { usePetitions } from 'hooks/queries/petitions';
-import { ReactComponent as EmptyStatePetition } from 'assets/empty-state-petition.svg';
 
 import styles from 'components/Donations/Donations.module.scss';
 
@@ -69,8 +67,10 @@ const Petitions = () => {
         </p>
       )}
 
-      {status === 'success' && (data.pages[0].data.length > 0) && (
-        <EmptyState icon={<EmptyStatePetition />} text="No se han encontrado peticiones" />
+      {status === 'success' && !(data.pages[0].data.length > 0) && (
+        <p className="my-11 w-full flex justify-center items-center">
+          No se han encontrado solicitudes para mostrar
+        </p>
       )}
     </div>
   );
